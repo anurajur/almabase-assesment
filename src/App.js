@@ -12,10 +12,10 @@ function App() {
 
   const handleDragStart = (e, item) => {
     if (item.id) {
-      // Dragging to reposition an existing item
+      
       const currentItemIndex = items.findIndex((i) => i.id === item.id);
       setCurrentElement(items[currentItemIndex]);
-      e.dataTransfer.setData("application/reactflow", item.id); // Set the item's ID, or some identifier
+      e.dataTransfer.setData("application/reactflow", item.id); 
       e.dataTransfer.effectAllowed = "move";
     } else {
       const rect = e.target.getBoundingClientRect();
@@ -42,7 +42,7 @@ function App() {
       const currentItem = items.find((item) => item.id.toString() === id);
       if (currentItem) {
         setCurrentElement(currentItem);
-        // Additional logic to set the position, if necessary
+       
       }
     } else {
       const label = e.dataTransfer.getData("text");
@@ -51,12 +51,12 @@ function App() {
       const x = e.clientX - dropAreaRect.left - offset.x;
       const y = e.clientY - dropAreaRect.top - offset.y;
       const newItem = {
-        id: Math.random(), // unique identifier for each element
+        id: Math.random(), 
         label,
         x,
         y,
-        fontSize: "16", // Default font size
-        fontWeight: "400", // Default font weight
+        fontSize: "16", 
+        fontWeight: "400", 
       };
       setItems([...items, newItem]);
     }
@@ -72,7 +72,7 @@ function App() {
   const handleSaveChanges = (e) => {
     e.preventDefault();
 
-    if (!currentElement) return; // Add this check
+    if (!currentElement) return; 
 
     setItems(
       items.map((item) =>
@@ -83,7 +83,7 @@ function App() {
   };
 
   const handleDragEnd = (e) => {
-    if (!currentElement) return; // Add this check
+    if (!currentElement) return; 
 
     const dropAreaRect = document
       .querySelector(".drop-area")
@@ -100,11 +100,11 @@ function App() {
       })
     );
 
-    setCurrentElement(null); // Clear the current element
+    setCurrentElement(null); 
   };
 
   const handleElementClick = (item, e) => {
-    e.stopPropagation(); // Prevent the drop area click event from firing
+    e.stopPropagation(); 
     setCurrentElement(item);
     setSelectedItemId(item.id);
     setIsModalOpen(true);
@@ -146,7 +146,7 @@ function App() {
     const downloadAnchorNode = document.createElement("a");
     downloadAnchorNode.setAttribute("href", dataStr);
     downloadAnchorNode.setAttribute("download", "page_configuration.json");
-    document.body.appendChild(downloadAnchorNode); // required for firefox
+    document.body.appendChild(downloadAnchorNode); 
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
   };
@@ -161,7 +161,7 @@ function App() {
         onDragEnd={handleDragEnd}
         onElementClick={handleElementClick}
         selectedItemId={selectedItemId}
-        setSelectedItemId={setSelectedItemId} // Add this line
+        setSelectedItemId={setSelectedItemId}
       />
       <Modal
         isOpen={isModalOpen}
