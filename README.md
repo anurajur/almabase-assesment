@@ -1,25 +1,25 @@
-# Clone 
-  ## To clone react app into local run:
+### Clone 
+  #### To clone react app into local run:
       git clone git@github.com:anurajur/almabase-assesment.git
 
-# Open any editor of your choice ( VS code )
+### Open any editor of your choice ( VS code )
 
-# open the cloned app in Editor 
+### open the cloned app in Editor 
 
-# Install required packages 
-  ## To install required packages run:
+### Install required packages 
+  #### To install required packages run:
       npm install
 
 
-# Run app 
-  ## To run app in the local use:
+### Run app 
+  #### To run app in the local use:
       npm start
 
-# You can check the result in any browser with below link :
+### You can check the result in any browser with below link :
     http://localhost:3000/
 
 
-# Check deployed app 
-  ## you can also check the deployed app :
+### Check deployed app 
+  #### you can also check the deployed app :
       https://anurajur.github.io/almabase-assesment/
   
