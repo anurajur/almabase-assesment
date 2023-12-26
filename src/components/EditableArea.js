@@ -1,6 +1,8 @@
 import React from 'react';
 import DropArea from './DropArea';
 
+//EditableArea component represents an area where items can be dragged and dropped.
+
 const EditableArea = ({ items, onDrop, onDragOver, onDragStart, onDragEnd, onElementClick, selectedItemId, setSelectedItemId }) => {
   return (
     <DropArea onDrop={onDrop} onDragOver={onDragOver} onClick={() => setSelectedItemId(null)}>
