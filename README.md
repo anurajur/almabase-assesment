@@ -17,4 +17,9 @@
 
 # You can check the result in any browser with below link :
     http://localhost:3000/
-    
+
+
+# Check deployed app 
+  ## you can also check the deployed app :
+      https://anurajur.github.io/almabase-assesment/
+  
