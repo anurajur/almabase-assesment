@@ -1,6 +1,7 @@
 import React from 'react';
 import DraggableItem from './DraggableItem';
 
+//Sidebar component containing draggable items and an export button.
 const Sidebar = ({ onDragStart, onExport }) => {
   return (
     <aside className="sidebar">
