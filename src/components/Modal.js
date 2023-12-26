@@ -1,5 +1,6 @@
 import React from "react";
 
+//Modal component for editing properties of a selected element.
 const Modal = ({
   isOpen,
   currentElement,
@@ -8,6 +9,8 @@ const Modal = ({
   onDeleteElement,
   handleChange,
 }) => {
+
+  // If the modal is closed or no current element is selected, return null
   if (!isOpen || !currentElement) {
     return null;
   }
